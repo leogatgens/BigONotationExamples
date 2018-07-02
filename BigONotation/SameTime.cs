@@ -8,6 +8,15 @@ namespace BigONotation
 {
    public class SameTime
     {
+        public SameTime(string[] itemsSmall, string[] itemsBig)
+        {
+
+
+        }
+        public SameTime()
+        {
+        }
+
       public   bool IsFirstElementNull(String[] strings)
         {
             if (strings[0] == null)
