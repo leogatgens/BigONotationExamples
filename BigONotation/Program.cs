@@ -10,6 +10,16 @@ namespace BigONotation
     {
         static void Main(string[] args)
         {
+            PerformanceGrowLinearly performanceGrowLinearly = new PerformanceGrowLinearly();
+            SameTime sameTime = new SameTime();
+
+            
+
+            
+
+             
+
+            Console.ReadKey();
         }
     }
 }
