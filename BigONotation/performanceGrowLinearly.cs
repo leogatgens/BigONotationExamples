@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BigONotation
 {
-    class PerformanceGrowLinearly
+   public  class PerformanceGrowLinearly
     {
 
       public   bool ContainsValue(String[] strings, String value)

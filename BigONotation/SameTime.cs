@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BigONotation
 {
-    class SameTime
+   public class SameTime
     {
       public   bool IsFirstElementNull(String[] strings)
         {
