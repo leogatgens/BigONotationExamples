@@ -19,7 +19,7 @@ namespace BigONotation
 
             SameTimeBigList();
             SameTimeTestSmallList();
-            
+
             GrowLinearly1();
             GrowLinearly2();
 
@@ -117,7 +117,8 @@ namespace BigONotation
         {
             O_N2_ performanceGrowLinearly = new O_N2_();
             TimeDiffCalculator timerDiff = new TimeDiffCalculator("SquareOfTheSize1");
-       
+
+            ListOf10000Items[9998] = "Item8888";
             timerDiff.Start();
          bool isDuplicated =   performanceGrowLinearly.ContainsDuplicates (ListOf10000Items);
             timerDiff.Finish();
@@ -134,7 +135,8 @@ namespace BigONotation
         {
             O_N2_ performanceGrowLinearly = new O_N2_();
             TimeDiffCalculator timerDiff = new TimeDiffCalculator("SquareOfTheSize2");
-           
+
+            ListOfOneMillonItems[999998] = "Item88888";
             timerDiff.Start();
             bool isDuplicated = performanceGrowLinearly.ContainsDuplicates(ListOfOneMillonItems);
             timerDiff.Finish();
