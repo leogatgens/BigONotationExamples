@@ -9,13 +9,13 @@ namespace BigONotation
     class Program
     {
         private static string[] ListOfOneMillonItems;
-        private static string[] ListOf10000Items;
+        private static string[] ListOfHundredThousandItems;
 
 
         static void Main(string[] args)
         {
             ListOfOneMillonItems = GenerateOneMillonItems();
-            ListOf10000Items = Generate10000Items();
+            ListOfHundredThousandItems = GenerateHundredThousandItems();
 
             SameTimeBigList();
             SameTimeTestSmallList();
@@ -42,11 +42,11 @@ namespace BigONotation
             return TheOneMillonItems;
         }
 
-        private static string[] Generate10000Items()
+        private static string[] GenerateHundredThousandItems()
         {
-            string[] The10000Items = new string[10000];
+            string[] The10000Items = new string[100000];
             string Prefix = "Item";
-            for (int i = 0; i < 10000; i++)
+            for (int i = 0; i < 100000; i++)
             {
                 The10000Items[i] = string.Concat(Prefix, i.ToString());
 
@@ -62,11 +62,11 @@ namespace BigONotation
             TimeDiffCalculator timerDiff = new TimeDiffCalculator("GrowLinearly1");
 
             timerDiff.Start();
-            bool ItemFound = performanceGrowLinearly.ContainsValue(ListOf10000Items, "Item9999");
+            bool ItemFound = performanceGrowLinearly.ContainsValue(ListOfHundredThousandItems, "Item99999");
             timerDiff.Finish();
             if (ItemFound == true)
             {
-                Console.WriteLine("Item9999 exist.");
+                Console.WriteLine("Item99999 exist.");
 
             }
                 
@@ -94,7 +94,7 @@ namespace BigONotation
             SameTime sameTime = new SameTime();
             TimeDiffCalculator timerDiff = new TimeDiffCalculator("Small");
             timerDiff.Start();
-            sameTime.IsFirstElementNull(ListOf10000Items);
+            sameTime.IsFirstElementNull(ListOfHundredThousandItems);
             timerDiff.Finish();   
 
            
@@ -118,9 +118,9 @@ namespace BigONotation
             O_N2_ performanceGrowLinearly = new O_N2_();
             TimeDiffCalculator timerDiff = new TimeDiffCalculator("SquareOfTheSize1");
 
-            ListOf10000Items[9998] = "Item8888";
+            ListOfHundredThousandItems[9998] = "Item88888";
             timerDiff.Start();
-         bool isDuplicated =   performanceGrowLinearly.ContainsDuplicates (ListOf10000Items);
+         bool isDuplicated =   performanceGrowLinearly.ContainsDuplicates (ListOfHundredThousandItems);
             timerDiff.Finish();
             if (isDuplicated)
             {
@@ -136,7 +136,7 @@ namespace BigONotation
             O_N2_ performanceGrowLinearly = new O_N2_();
             TimeDiffCalculator timerDiff = new TimeDiffCalculator("SquareOfTheSize2");
 
-            ListOfOneMillonItems[999998] = "Item88888";
+            ListOfOneMillonItems[999998] = "Item888888";
             timerDiff.Start();
             bool isDuplicated = performanceGrowLinearly.ContainsDuplicates(ListOfOneMillonItems);
             timerDiff.Finish();
